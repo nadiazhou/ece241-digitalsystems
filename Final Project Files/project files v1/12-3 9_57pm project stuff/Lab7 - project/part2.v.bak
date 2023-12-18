@@ -1,0 +1,146 @@
+//
+// This is the template for Part 2 of Lab 7.
+//
+// Paul Chow
+// November 2021
+//
+
+module part2(iResetn,iPlotBox,iBlack,iColour,iLoadX,iXY_Coord,iClock,oX,oY,oColour,oPlot,oDone);
+   parameter X_SCREEN_PIXELS = 8'd160;
+   parameter Y_SCREEN_PIXELS = 7'd120;
+
+   input wire iResetn, iPlotBox, iBlack, iLoadX;
+   input wire [2:0] iColour;
+   input wire [6:0] iXY_Coord;
+   input wire 	    iClock;
+   output wire [7:0] oX;         // VGA pixel coordinates
+   output wire [6:0] oY;
+
+   output wire [2:0] oColour;     // VGA pixel colour (0-7)
+   output wire 	   oPlot;       // Pixel draw enable
+   output wire       oDone;       // goes high when finished drawing frame
+
+   //
+   // Your code goes here
+   //
+
+endmodule // part2
+
+module ControlPath(
+input iClock, iResetn, iPlotBox, iBlack, iLoadX; \
+
+parameter 	Reset  = 3'd0,
+				LoadX = 3'd1,
+				WaitX = 3'd2,
+				LoadYC = 3'd3,
+				Plot  = 3'd5,
+				Done  = 3'd6,
+				Black = 3'd7;
+
+	reg [3:0] PS, NS;
+					
+	// State Table
+	always@(*)
+		begin: state_table
+			case (PS)
+				Reset: begin
+				NS = Reset;
+				end
+				LoadX: NS = iLoadX?LoadX:WaitX;
+				WaitX: NS = iPlotBox?LoadYC:WaitX;
+				LoadYC: NS = iPlotBox?LoadYC:Plot;
+				Plot: NS = 
+				end
+				end
+
+				default: NS = Reset;
+			endcase
+	end // state_table
+	
+	always @(*)
+		begin: enable_signals
+      // By default make all our signals 0
+      oLoadX = 1'b0;
+      oLoadYC = 1'b0;
+		oPlot = 1'b0;
+		oBlack = 1'b0;
+			
+      case (current_state)
+			LoadX: begin
+				oLoadX = 1'b1;
+				end
+			LoadYC: begin
+				oLoadYC = 1'b1;
+				end
+			Plot: begin
+				oPlot = 1'b1;
+				end
+			Black: begin
+				oBlack = 1'b1;
+				oPlot = 1'b1;
+				end
+		endcase
+
+	always @(posedge Clock)
+		begin: state_FFs
+			if(Reset == 1'b1)
+				PS <= Reset; // Should set reset state to state A
+			else if (iBlack)
+				PS <= Black;
+			else if (iLoadX)
+				PS <= LoadX
+			else
+				PS <= NS;
+	end // state_FFS
+
+
+endmodule 
+
+module DataPath (iResetn, iPlotBox, iBlack, 
+
+	input iResetn, iPlotBox, iBlack, iLoadX;
+
+	input [7:0] X_SCREEN_PIXELS;
+	input [6:0] Y_SCREEN_PIXELS, iXY_Coord; 
+
+	reg [7:0] regX; 
+	reg [6:0] regY;
+	reg [2:0] regC;
+
+	output reg [7:0] regX; 
+	output reg [6:0] regY;
+	output reg [2:0] regC;
+	
+	)
+	
+	
+ 
+ 
+endmodule
+
+module register7bit(pre, enable, clock, reset, out); 
+
+	input [6:0] pre;
+	input enable, clock, reset;
+	output reg [6:0] out;
+
+	always@(posedge clock)
+	begin
+		if (reset) out <= 8'b00000000;
+		else if (enable) out <= pre;
+		else out <= out;
+	end
+endmodule
+
+module counter (
+
+	always@(posedge ClockIn)
+	begin
+		if (Reset == 1'b1)
+			CounterValue <= 4'b0000;
+		else
+			CounterValue[3:0] <= CounterValue + 1'b1;
+	end
+
+
+

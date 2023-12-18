@@ -1,0 +1,10 @@
+
+
+C:/intelFPGA_lite/ECE241/Lab7 - project/Audio_Controller/Audio_Clock.v
+
+Dec 05 03PM:38:19>: Error in CNX file format.
+
+Error messages are listed in file
+C:/intelFPGA_lite/ECE241/Lab7 - project/Audio_Controller/Audio_Clock.cnxerr.
+
+Can't create the custom megafunction variation file(s)

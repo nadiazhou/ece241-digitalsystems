@@ -1,0 +1,12 @@
+
+State Machine - |part2|control:c0|PS
+Name PS.Done PS.Black PS.Plot PS.WaitYC PS.LoadYC PS.WaitX PS.LoadX PS.iReset PS.BlackPlot 
+PS.iReset 0 0 0 0 0 0 0 0 0 
+PS.LoadX 0 0 0 0 0 0 1 1 0 
+PS.WaitX 0 0 0 0 0 1 0 1 0 
+PS.LoadYC 0 0 0 0 1 0 0 1 0 
+PS.WaitYC 0 0 0 1 0 0 0 1 0 
+PS.Plot 0 0 1 0 0 0 0 1 0 
+PS.Black 0 1 0 0 0 0 0 1 0 
+PS.Done 1 0 0 0 0 0 0 1 0 
+PS.BlackPlot 0 0 0 0 0 0 0 1 1 

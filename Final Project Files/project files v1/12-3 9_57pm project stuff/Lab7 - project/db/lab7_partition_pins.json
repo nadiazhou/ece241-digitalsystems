@@ -1,0 +1,149 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "oX[0]",
+					"strict" : false
+				},
+				{
+					"name" : "oX[1]",
+					"strict" : false
+				},
+				{
+					"name" : "oX[2]",
+					"strict" : false
+				},
+				{
+					"name" : "oX[3]",
+					"strict" : false
+				},
+				{
+					"name" : "oX[4]",
+					"strict" : false
+				},
+				{
+					"name" : "oX[5]",
+					"strict" : false
+				},
+				{
+					"name" : "oX[6]",
+					"strict" : false
+				},
+				{
+					"name" : "oX[7]",
+					"strict" : false
+				},
+				{
+					"name" : "oY[0]",
+					"strict" : false
+				},
+				{
+					"name" : "oY[1]",
+					"strict" : false
+				},
+				{
+					"name" : "oY[2]",
+					"strict" : false
+				},
+				{
+					"name" : "oY[3]",
+					"strict" : false
+				},
+				{
+					"name" : "oY[4]",
+					"strict" : false
+				},
+				{
+					"name" : "oY[5]",
+					"strict" : false
+				},
+				{
+					"name" : "oY[6]",
+					"strict" : false
+				},
+				{
+					"name" : "oColour[0]",
+					"strict" : false
+				},
+				{
+					"name" : "oColour[1]",
+					"strict" : false
+				},
+				{
+					"name" : "oColour[2]",
+					"strict" : false
+				},
+				{
+					"name" : "oPlot",
+					"strict" : false
+				},
+				{
+					"name" : "oDone",
+					"strict" : false
+				},
+				{
+					"name" : "iClock",
+					"strict" : false
+				},
+				{
+					"name" : "iResetn",
+					"strict" : false
+				},
+				{
+					"name" : "iColour[0]",
+					"strict" : false
+				},
+				{
+					"name" : "iPlotBox",
+					"strict" : false
+				},
+				{
+					"name" : "iColour[1]",
+					"strict" : false
+				},
+				{
+					"name" : "iColour[2]",
+					"strict" : false
+				},
+				{
+					"name" : "iLoadX",
+					"strict" : false
+				},
+				{
+					"name" : "iBlack",
+					"strict" : false
+				},
+				{
+					"name" : "iXY_Coord[0]",
+					"strict" : false
+				},
+				{
+					"name" : "iXY_Coord[1]",
+					"strict" : false
+				},
+				{
+					"name" : "iXY_Coord[2]",
+					"strict" : false
+				},
+				{
+					"name" : "iXY_Coord[3]",
+					"strict" : false
+				},
+				{
+					"name" : "iXY_Coord[4]",
+					"strict" : false
+				},
+				{
+					"name" : "iXY_Coord[5]",
+					"strict" : false
+				},
+				{
+					"name" : "iXY_Coord[6]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,12 @@
+
+State Machine - |fill|part2:p2|control:first|current_state
+Name current_state.S_BLACK_WAIT current_state.S_BLACK current_state.S_PLOT_WAIT current_state.S_PLOT current_state.S_LOAD_YC current_state.S_WAIT_X current_state.S_LOAD_X current_state.S_WAIT current_state.S_LOAD_WAIT 
+current_state.S_WAIT 0 0 0 0 0 0 0 0 0 
+current_state.S_LOAD_X 0 0 0 0 0 0 1 1 0 
+current_state.S_WAIT_X 0 0 0 0 0 1 0 1 0 
+current_state.S_LOAD_YC 0 0 0 0 1 0 0 1 0 
+current_state.S_PLOT 0 0 0 1 0 0 0 1 0 
+current_state.S_PLOT_WAIT 0 0 1 0 0 0 0 1 0 
+current_state.S_BLACK 0 1 0 0 0 0 0 1 0 
+current_state.S_BLACK_WAIT 1 0 0 0 0 0 0 1 0 
+current_state.S_LOAD_WAIT 0 0 0 0 0 0 0 1 1 

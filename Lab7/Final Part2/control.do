@@ -1,0 +1,53 @@
+# set the working dir, where all compiled verilog goes
+vlib work
+
+# compile all verilog modules in mux.v to working dir
+# could also have multiple verilog files
+vlog part2.v
+
+#load simulation using mux as the top level simulation module
+vsim control
+
+#log all signals and add some signals to waveform window
+log {/*}
+# add wave {/*} would add all items in top level simulation module
+add wave {/*}
+
+force {clk} 0 0ns, 1 {5ns} -r 10ns
+
+force iLoadX 0
+force iPlotBox 0
+force iBlack 0
+run 50ns
+
+force reset 0
+run 20ns
+
+force reset 1
+run 20ns
+
+force iLoadX 1
+run 20ns
+
+force iLoadX 0
+run 20ns
+
+force iPlotBox 1
+run 20ns
+
+force iPlotBox 0
+run 500ns
+
+force iBlack 1
+run 20ns
+
+force iBlack 0
+run 500ns
+
+
+
+
+
+
+
+

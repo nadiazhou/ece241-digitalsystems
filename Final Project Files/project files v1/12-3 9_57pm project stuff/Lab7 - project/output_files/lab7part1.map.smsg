@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at KD.v(48): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/ECE241/Lab7 - project/KD.v Line: 48
+Warning (10268): Verilog HDL information at db2.v(83): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/ECE241/Lab7 - project/db2.v Line: 83
